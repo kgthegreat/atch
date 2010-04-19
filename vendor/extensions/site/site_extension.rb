@@ -14,6 +14,7 @@ class SiteExtension < Spree::Extension
 
   def activate
 
+
     Spree::Config.set(:logo => '/images/attachawal_resized.png')
     # make your helper avaliable in all views
     # Spree::BaseController.class_eval do
@@ -35,8 +36,5 @@ class SiteExtension < Spree::Extension
       end
     end
 
-    AppConfiguration.class_eval do
-      preference :allow_ssl_in_production, :boolean, :default => false
-    end
   end
 end
