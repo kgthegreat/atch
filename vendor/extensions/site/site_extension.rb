@@ -14,8 +14,7 @@ class SiteExtension < Spree::Extension
 
   def activate
 
-
-    Spree::Config.set(:logo => '/images/attachawal_resized.png')
+#    Spree::Config.set(:logo => '/images/attachawal_resized.png')
     # make your helper avaliable in all views
     # Spree::BaseController.class_eval do
     #   helper YourHelper
