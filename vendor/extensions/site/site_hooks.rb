@@ -3,7 +3,8 @@ class SiteHooks < Spree::ThemeSupport::HookListener
   insert_after :inside_head, 'shared/styles'
 #  insert_after :homepage_sidebar_navigation, :text => "Welcome"
 
-  #  remove :sidebar
+  remove :sidebar
+  remove :homepage_products
   #
   # In this file you can modify the content of the hooks available in the default templates
   # and avoid overriding a template in many situations. Multiple extensions can modify the
@@ -29,7 +30,7 @@ class SiteHooks < Spree::ThemeSupport::HookListener
   #
   #
 
-   insert_before :homepage_products, :text => "<h1>Welcome to the store!</h1>"
+   insert_before :homepage_products, :text => "<h1>Welcome to the store!<br> We are currently gearing up to serve you. Good things coming your way very soon. :) </h1>"
   #   insert_after :homepage_products, 'shared/offers' # renders a partial
   #   replace :taxon_sidebar_navigation, 'shared/my_sidebar
   #
