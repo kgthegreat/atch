@@ -30,7 +30,7 @@ class SiteHooks < Spree::ThemeSupport::HookListener
   #
   #
 
-   insert_before :homepage_products, :text => "<h1>Welcome to the store!<br> We are currently gearing up to serve you. Good things coming your way very soon. :) </h1>"
+   insert_before :homepage_products, :text => "<h1>Welcome to the store!<br> We are currently gearing up to serve you.<br> Good things coming your way very soon. :) </h1>"
   #   insert_after :homepage_products, 'shared/offers' # renders a partial
   #   replace :taxon_sidebar_navigation, 'shared/my_sidebar
   #
