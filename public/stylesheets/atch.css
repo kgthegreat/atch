@@ -4,4 +4,4 @@ body { background: #fff; }
 .product-listing li { background: #FFF; height: 140px; }
 .product-listing li a.info { background: #FFF; }
 
-/* div#footer { display: none; }*/
+div#footer { display: none; }
