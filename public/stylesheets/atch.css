@@ -1,7 +1,21 @@
 body { background: #fff; }
-/*.container { width: 850px; }*/
 
 .product-listing li { background: #FFF; height: 140px; }
 .product-listing li a.info { background: #FFF; }
 
+/*To hide the footer*/
 div#footer { display: none; }
+
+.container-header-user-logged-in {
+  width: 1190px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: block;
+}
+
+.container-header-not-logged-in {
+  width: 1080px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: block;
+}
