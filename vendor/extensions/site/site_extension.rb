@@ -26,6 +26,9 @@ class SiteExtension < Spree::Extension
     end
 
     Spree::Config.set(:logo => '/images/attachawal.png') # '/images/attachawal_really_really_small.png')
+    #    Spree::Heroku::Config.set(:bucket => 'aag-atch')
+    #   Spree::Heroku::Config.set(:access_key_id => 'AKIAIN7ZCJDYURPGGQEQ')
+    #   Spree::Heroku::Config.set(:secret_access_key => 'fHpiqUrpcSbn5pUZWVO4nWUf1g8cEU3jqh5EZf8O')
     # make your helper avaliable in all views
     # Spree::BaseController.class_eval do
     #   helper YourHelper
