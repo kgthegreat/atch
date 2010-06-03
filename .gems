@@ -15,3 +15,4 @@ paperclip -v '>=2.3.1.1'
 state_machine -v '0.8.0'
 spree -v '0.10.2'
 aws-s3
+fastercsv
