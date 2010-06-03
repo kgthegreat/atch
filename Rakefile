@@ -9,8 +9,8 @@ namespace :spree do
     require 'fastercsv'
 
     products = Product.find(:all)
-    puts "Exporting to #{RAILS_ROOT}/products.csv"
-    FasterCSV.open("#{RAILS_ROOT}/products.csv", "w") do |csv|
+    puts "Exporting to #{RAILS_ROOT}/tmp/products.csv"
+    FasterCSV.open("#{RAILS_ROOT}/tmp/products.csv", "w") do |csv|
 
       csv << ["id", "sku", "name", "description", "price" , "on_hand", "taxons", "has_variants", "no_of_variants", "deleted_at"]
 
