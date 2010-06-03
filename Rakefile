@@ -24,7 +24,7 @@ namespace :spree do
                 p.on_hand,
                # p.taxons[0].name,
          #       p.taxons[0].permalink,
-                p.taxons[0].permalink.to_s.reverse.sub('/','').reverse.sub('categories/','').sub('groceries','Groceries').sub('to-be-cooked','To Be Cooked').sub('pulses','Pulses').sub('personal-grooming', 'Personal Grooming').sub('hair-care','Hair Care'),
+            #    p.taxons[0].permalink.to_s.reverse.sub('/','').reverse.sub('categories/','').sub('groceries','Groceries').sub('to-be-cooked','To Be Cooked').sub('pulses','Pulses').sub('personal-grooming', 'Personal Grooming').sub('hair-care','Hair Care'),
                # Taxon.find_by_name(p.taxons.permalink),
                 p.has_variants?,
 
