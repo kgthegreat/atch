@@ -1,5 +1,6 @@
 require File.join(File.dirname(__FILE__), 'config', 'boot')
 require 'rake'
+require 'aws/s3'
 
 import File.join(SPREE_ROOT, 'Rakefile')
 
