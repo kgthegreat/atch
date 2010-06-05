@@ -50,6 +50,7 @@ namespace :spree do
     puts "transferring to s3"
     file = "#{RAILS_ROOT}/tmp/products.csv"
     S3Object.store(file,open(file),'aag-atch')
+
     puts "Export Complete"
   end
 
