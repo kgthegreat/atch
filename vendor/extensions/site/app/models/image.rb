@@ -4,9 +4,9 @@ class Image < Asset
   :default_style => :product,
   :path => "assets/products/:id/:style/:basename.:extension" ,
   :storage => :s3,
-  :bucket => 'aag-atch'
-#  :s3_credentials => {
- #   :access_key_id => '',
-  #  :secret_access_key => ''
- # }
+  :bucket => 'aag-atch',
+  :s3_credentials => {
+    :access_key_id => ENV['S3_KEY'],
+    :secret_access_key => ['S3_SECRET']
+  }
 end
