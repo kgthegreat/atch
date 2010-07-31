@@ -5,9 +5,8 @@
   <%= render :partial => 'shared/head'%>
 <% end %>
 </head>
-<%
-if @body_class.nil?
-  if @content_for_sidebar
+<%if @body_class.nil?
+    if @content_for_sidebar
     @body_class = 'two-col'
   else
     @body_class = 'one-col'
@@ -34,9 +33,12 @@ end
     <%= logo %>
   </div>
 
-  <!--div id="header" class="container">
+  <div id="header" class="container">
+    <% if @content_for_sidebar -%>
+      <%= render 'shared/pitch' %>
+    <% end -%>
 
-  </div-->
+  </div>
 
 
   <div id="wrapper" class="container">

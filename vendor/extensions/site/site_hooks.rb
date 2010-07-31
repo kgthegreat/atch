@@ -1,7 +1,9 @@
 class SiteHooks < Spree::ThemeSupport::HookListener
 
   insert_after :inside_head, 'shared/styles'
-#  insert_after :homepage_sidebar_navigation, :text => "Welcome"
+  insert_after :inside_head, 'shared/js'
+
+  #  insert_after :homepage_sidebar_navigation, :text => "Welcome"
 
  # remove :sidebar
  # remove :homepage_products

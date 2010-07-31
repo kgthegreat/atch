@@ -1,0 +1,9 @@
+log/*.log
+.#*
+*~
+db/*.sqlite3.db
+*.tmproj
+tmp/cache
+tmp/pids
+tmp/sessions
+tmp/sockets

@@ -1,0 +1,19 @@
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="/javascripts/stepcarousel.js"></script>
+
+<script type="text/javascript">
+
+stepcarousel.setup({
+        galleryid: 'mygallery', //id of carousel DIV
+        beltclass: 'belt', //class of inner belt DIV containing all the panel DIVs
+        panelclass: 'panel', //class of panel DIVs each holding content
+        autostep: {enable:true, moveby:1, pause:8000},
+        panelbehavior: {speed:1000, wraparound:true, persist:true},
+        defaultbuttons: {enable: true, moveby: 1, leftnav: ['images/header_pitch/left_nav_2.png', 460, 232], rightnav: ['images/header_pitch/right_nav_2.png', -460, 232]},
+        statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
+        contenttype: ['inline'] //content setting ['inline'] or ['ajax', 'path_to_external_file']
+})
+
+</script>
