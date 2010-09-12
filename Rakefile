@@ -19,13 +19,9 @@ namespace :spree do
 
     products = Product.find(:all)
     puts "Exporting to #{RAILS_ROOT}/tmp/products.csv" #some
-    #"Groceries/To Be Cooked/Pulses"
     def make_pretty_taxon(leaf_taxon,pretty_taxon)
-      #pretty_taxon = ""
       leaf_taxon_name = leaf_taxon.name
       if leaf_taxon_name == "Groceries" || leaf_taxon_name == "Personal Grooming" || leaf_taxon_name == "Home Care"
-        #if pretty_taxon.contains
-        #end
         pretty_taxon = leaf_taxon_name + '/' + pretty_taxon;
         return pretty_taxon;
       else
@@ -97,11 +93,11 @@ namespace :spree do
 
       end
     end
-    puts "transferring to s3"
-    file = "#{RAILS_ROOT}/tmp/products.csv"
-    AWS::S3::S3Object.store(file,open(file),'aag-atch')
+    #puts "transferring to s3"
+    #file = "#{RAILS_ROOT}/tmp/products.csv"
+    #AWS::S3::S3Object.store(file,open(file),'aag-atch')
 
-    puts "Export Complete"
+    #puts "Export Complete"
   end
 
   desc "Update / Import products from CSV File, expects file=/path/to/import.csv"
@@ -116,15 +112,15 @@ namespace :spree do
  #   list_of_variants = Array.new
     FasterCSV.foreach(ENV['file']) do |row|
       id                = row[0]
-      sku               = row[1]
+      sku               = row[1].to_s.strip
       name              = row[2]
-      description       = row[3]
-      measure           = row[4]
-      price             = row[5]
-      on_hand           = row[6]
-      taxon_string      = row[7]
-      has_variants      = row[8]
-      no_of_variants    = row[9]
+      description       = row[3].to_s.strip
+      measure           = row[4].to_s.strip
+      price             = row[5].to_s.strip
+      on_hand           = row[6].to_s.strip
+      taxon_string      = row[7].to_s.strip
+      has_variants      = row[8].to_s.strip
+      no_of_variants    = row[9].to_s.strip
       deleted_at        = row[10]
       #image_file_name   = row[11]
 
@@ -142,13 +138,16 @@ namespace :spree do
           # variant = product_with_variant.variants.find_or_create_by_sku_and_price(:sku => sku, :price => price.to_d)
           variant.option_values << OptionValue.find_by_presentation(measure)
           variant.on_hand = on_hand.to_i
+          variant.save!
         else
           puts "updating a variant"
  #         variant = Product.find(id)
-         variant = product_with_variant.variants.find(id)
+          variant = product_with_variant.variants.find(id)
           variant.sku = sku
           variant.price = price.to_d
+          puts "variant on hand #{on_hand.to_i}"
           variant.on_hand = on_hand.to_i
+          variant.save!
         end
         total_variants -= 1
         if total_variants ==  0       #if this is the last variant
@@ -189,11 +188,11 @@ namespace :spree do
 
       product.available_on =  Time.now
       taxonomy = Taxonomy.first          # default to main taxonomy for now
-      if taxon_string.to_s.blank?
-        puts "Warning: missing taxon info for #{p.name}"
+      if taxon_string.blank?
+        puts "Warning: missing taxon info for #{name}"
       else
         taxon_to_store = taxonomy.root
-        taxon_string.to_s.gsub('/',',').split(/\s*,\s*/).each do |singular_taxon|
+        taxon_string.gsub('/',',').split(/\s*,\s*/).each do |singular_taxon|
           #        row[6].to_s.split('/').each do |name|
 
           # =>  nxt = Taxon.find_or_create_by_parent_id_and_taxonomy_id(taxon.id, taxonomy.id)
@@ -201,14 +200,14 @@ namespace :spree do
           taxon_to_store = nxt
         end
           #        product.taxons << taxon
-          product.taxons = [taxon_to_store]  #assumption: only one taxon for a product
+        product.taxons = [taxon_to_store]  #assumption: only one taxon for a product
       end
 
-      if sku.nil? || sku.to_s.eql?("")
+      if sku.nil? || sku.empty?
        # new_sku = rand(9999999) + 1000000;
          product.sku = "SOME"
       else
-         product.sku = sku.to_s
+         product.sku = sku
       end
 
    #   puts name
@@ -216,7 +215,7 @@ namespace :spree do
       product.description = description
 
       product.master_price = price.to_d
-      # product.on_hand = on_hand.to_d
+      #product.on_hand = on_hand.to_i
 
 #      get("Image File Name").split(',').map(&:strip).each do |file|
 
@@ -263,12 +262,12 @@ namespace :spree do
       end
 =end
 
-      if has_variants.to_s == "true"
+      if has_variants.include? "true"
         puts "Yes we have some variants"
         total_variants = no_of_variants.to_i
         product_with_variant = product
         product.save!
-      elsif has_variants.to_s == "false"
+      elsif has_variants.include? "false"
         product.save!
       end
 
