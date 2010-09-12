@@ -97,9 +97,9 @@ namespace :spree do
 
       end
     end
-  #  puts "transferring to s3"
- #   file = "#{RAILS_ROOT}/tmp/products.csv"
-#   AWS::S3::S3Object.store(file,open(file),'aag-atch')
+    puts "transferring to s3"
+    file = "#{RAILS_ROOT}/tmp/products.csv"
+    AWS::S3::S3Object.store(file,open(file),'aag-atch')
 
     puts "Export Complete"
   end
