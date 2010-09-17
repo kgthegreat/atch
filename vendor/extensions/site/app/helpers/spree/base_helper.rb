@@ -91,7 +91,7 @@ module Spree::BaseHelper
 
   def product_image(product, options={})
     if product.images.empty?
-      image_tag "noimage/product.jpg", options
+      image_tag "atchnoimage/product.jpg", options
     else
       image_tag product.images.first.attachment.url(:product), options
     end
