@@ -15,6 +15,7 @@ end
  %>
 <body class="<%= @body_class %>"<%= %( id="#{@body_id}") if @body_id %>>
 
+
 <% if current_user -%>
 
   <div id="header" class="container-header-user-logged-in">
@@ -24,6 +25,8 @@ end
   <div id="header" class="container-header-not-logged-in">
 
 <% end -%>
+
+
 
   <div id="login-bar">
       <ul id="nav-bar">
@@ -35,7 +38,7 @@ end
 
   <div id="header" class="container">
     <% if @content_for_sidebar -%>
-      <%= render 'shared/pitch' %>
+      <% # render 'shared/pitch' %>
     <% end -%>
 
   </div>
@@ -64,5 +67,8 @@ end
   </div>
 
 <%= render 'shared/feedback' -%>
+<%= render 'shared/offers' -%>
+
+
 </body>
 </html>

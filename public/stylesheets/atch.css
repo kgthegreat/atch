@@ -1,7 +1,229 @@
 body { background: #fff; }
 
-.product-listing li { background: #FFF; height: 140px; }
-.product-listing li a.info { background: #FFF; }
+.product-listing li {
+    background: #FFF;
+    height: 140px;
+    border: none;
+}
+.product-listing li a.info {
+    background: #FFF;
+}
+
+#wrapper {
+  background: none;
+  padding: 25px 20px 20px;
+  position: relative;
+}
+body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.png); }
+.container {
+    //width: 1300px;
+   //margin-left: 7%;
+ }
+
+/* CATEGORIES LISTING STYLE STARTS*/
+
+.dropdown {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 150px; /* Width of Menu Items */
+        //border-bottom: 1px solid #ccc;
+        }
+
+.dropdown li {
+        position: relative;
+        margin: 0;
+        //background: #000000;
+        }
+
+.dropdown li ul {
+        position: absolute;
+        left: 149px; /* Set 1px less than menu width */
+        top: 0;
+        display: none;
+        }
+
+/* Styles for Menu Items */
+.dropdown li a {
+        cursor: pointer !important;
+        display: block;
+        text-decoration: none;
+        color: #333333;
+        background: #fff; /* IE6 Bug */
+        padding: 5px;
+        //border: 1px solid #ccc;
+        border-bottom: 0;
+        line-height: 2.5em;
+        padding-left: 20px;
+        //width: 170px;
+        white-space: nowrap;
+        overflow: hidden;
+
+        }
+
+/* Fix IE. Hide from IE Mac \*/
+* html dropdown li { float: left; height: 1%; }
+* html dropdown li a { height: 1%; }
+/* End */
+
+.dropdown li a:hover {
+    //background: url(../images/menu-hover.png) right center no-repeat;
+    color: #E2144A;
+    background: #f9f9f9;
+} /* Hover Styles */
+
+.dropdown li ul li a { padding: 2px 5px; }  /*Sub Menu Styles */
+
+.dropdown li:hover ul  { display: block; } /* The magic */
+
+
+.dropdown li.over ul  { display: block; } /* The magic */
+
+.dropdown li.current { width: 250px; }
+.dropdown li.current a {
+  //width: 250px;
+  //background: url(../images/menu-current.png) right center no-repeat;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.dropdown li.current a.root { width: 183px; }
+.dropdown a.root {
+  color: #222222;
+  font-size: 1.2em;
+  text-indent: -5px;
+  line-height: 2.2em;
+}
+
+
+.new-category-listing {
+  list-style: none;
+  margin: 2em 0px 0px 0px;
+  padding: 0px;
+}
+.new-category-listing li {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  //height: 180px;
+  //width: 350px;
+  //text-align: left;
+  float: left;
+  margin: 1px;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  position: relative;
+}
+.click-for-more
+{
+    float: right;
+    }
+
+.category-listing li a {
+  display: block;
+  text-decoration: none;
+  color: #111111;
+}
+.new-category-listing li a.info {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 5px;
+  width: 150px;
+  min-height: 60px;
+  background: #ffffff;
+  border-top: 1px solid #ffffff;
+}
+.new-category-listing li a.info span { display: block; }
+.category-listing li:hover { border-color: #1b1b1b; }
+.category-listing li:hover a.info {
+  background: #1b1b1b url(../images/bottom_shine.png) bottom left repeat-x;
+  color: #ffffff;
+}
+
+/* CATEGORIES LISTING STYLE ENDS*/
+
+/* For Bottom of the page pagination */
+
+
+.pagination{
+padding: 2px;
+text-align: center;
+}
+
+.pagination ul{
+margin: 0;
+padding: 0;
+text-align: center; /*Set to "right" to right align pagination interface*/
+font-size: 16px;
+}
+
+.pagination li{
+list-style-type: none;
+display: inline;
+padding-bottom: 1px;
+}
+
+.pagination a, .pagination a:visited{
+padding: 0 5px;
+border: 1px solid #9aafe5;
+text-decoration: none;
+color: #2e6ab1;
+}
+
+.pagination a:hover, .pagination a:active{
+border: 1px solid #2b66a5;
+color: #000;
+background-color: #FFFF80;
+}
+
+.pagination a.currentpage{
+background-color: #2e6ab1;
+color: #FFF !important;
+border-color: #2b66a5;
+font-weight: bold;
+cursor: default;
+//display: block;
+}
+
+.pagination a.disablelink, .pagination a.disablelink:hover{
+background-color: white;
+cursor: default;
+color: #929292;
+border-color: #929292;
+font-weight: normal !important;
+}
+
+.pagination a.prevnext{
+font-weight: bold;
+}
+
+/* end pagination */
+
+/*FOR OFFERS TAB*/
+.verticaltext {
+    writing-mode: tb-rl;
+    filter: flipv fliph;
+}
+
+p.css-vertical-text {
+        color:#333;
+        border:0px solid red;
+        writing-mode:tb-rl;
+        -webkit-transform:rotate(90deg);
+        -moz-transform:rotate(90deg);
+        -o-transform: rotate(90deg);
+        white-space:nowrap;
+        display:block;
+        bottom:0;
+        width:20px;
+        height:20px;
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        font-size:24px;
+        font-weight:normal;
+        text-shadow: 0px 0px 1px #333;
+}
+
+/*OFFERS TAB END*/
 
 /*To hide the footer*/
 div#footer { display: none; }

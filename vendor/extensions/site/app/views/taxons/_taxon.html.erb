@@ -1,0 +1,16 @@
+<div class="taxon">
+
+<ul class="new-category-listing">
+<li>
+  <h3><%= link_to taxon.name, seo_url(taxon), :class => 'breadcrumbs' %></h3>
+
+  <ul class="product-listing">
+
+   <%= render :partial => "shared/products.html.erb", :locals => {:products => taxon_preview(taxon,2), :taxon => taxon} %>
+
+   </ul>
+<%= link_to "Click for more >>", seo_url(taxon), :class => 'click-for-more' %>
+</li>
+</ul>
+
+</div>

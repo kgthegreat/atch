@@ -2,8 +2,9 @@ class SiteHooks < Spree::ThemeSupport::HookListener
 
   insert_after :inside_head, 'shared/styles'
   insert_after :inside_head, 'shared/js'
+  replace :taxon_sidebar_navigation, 'shared/sidebar_atch'
 
-  #  insert_after :homepage_sidebar_navigation, :text => "Welcome"
+  replace :homepage_sidebar_navigation, 'shared/sidebar_atch'
 
  # remove :sidebar
  # remove :homepage_products
