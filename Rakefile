@@ -19,7 +19,7 @@ namespace :spree do
     def make_really_pretty_taxon(leaf_taxon,pretty_taxon="")
       pretty_taxon = leaf_taxon.name + '/' + pretty_taxon if !leaf_taxon.nil?
       parent_taxon = Taxon.find(leaf_taxon.parent_id) if !leaf_taxon.nil? && !leaf_taxon.parent_id.nil?
-      return pretty_taxon if parent_taxon.name == "Categories"  #This is the name of your root taxon. For this project it is "Shop By Categories"
+      return pretty_taxon if parent_taxon.name == "Departments"  #This is the name of your root taxon. For this project it is "Shop By Categories"
       make_really_pretty_taxon(parent_taxon,pretty_taxon) if !parent_taxon.nil?
     end
     FasterCSV.open("#{RAILS_ROOT}/tmp/products.csv", "w") do |csv|
