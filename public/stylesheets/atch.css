@@ -41,7 +41,7 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
         left: 159px; /* Set 1px less than menu width */
         top: 0;
         display: none;
-	border: 1px solid #45b972;
+	//border: 1px solid #45b972;
 	z-index: 2000;
         }
 
