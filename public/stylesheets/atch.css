@@ -27,7 +27,7 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
         padding: 0;
         list-style: none;
         width: 160px; /* Width of Menu Items */
-        //border: 1px solid #45b972;
+        border: 1px solid #dddddd;
         }
 
 .dropdown li {
@@ -41,7 +41,7 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
         left: 159px; /* Set 1px less than menu width */
         top: 0;
         display: none;
-	//border: 1px solid #45b972;
+	border: 1px solid #dddddd;
 	z-index: 2000;
         }
 
@@ -95,7 +95,7 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
   color: #222222;
   font-size: 1.2em;
   text-indent: -15px;
-  line-height: 2.2em;
+  line-height: 1.5em;
 }
 
 
