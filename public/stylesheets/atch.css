@@ -88,7 +88,7 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
   white-space: nowrap;
   overflow: hidden;
 }
-.dropdown li.current a.root { width: 183px; }
+.dropdown li.current a.root { width: 135px; }
 .dropdown a.root {
   color: #222222;
   font-size: 1.2em;
