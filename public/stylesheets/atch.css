@@ -26,8 +26,8 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
         margin: 0;
         padding: 0;
         list-style: none;
-        width: 150px; /* Width of Menu Items */
-        //border-bottom: 1px solid #ccc;
+        width: 160px; /* Width of Menu Items */
+        border: 1px solid #45b972;
         }
 
 .dropdown li {
@@ -38,9 +38,11 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
 
 .dropdown li ul {
         position: absolute;
-        left: 149px; /* Set 1px less than menu width */
+        left: 159px; /* Set 1px less than menu width */
         top: 0;
         display: none;
+	border: 1px solid #45b972;
+	z-index: 2000;
         }
 
 /* Styles for Menu Items */
@@ -53,12 +55,12 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
         padding: 5px;
         //border: 1px solid #ccc;
         border-bottom: 0;
-        line-height: 2.5em;
+        line-height: 1.5em;
         padding-left: 20px;
         //width: 170px;
         white-space: nowrap;
         overflow: hidden;
-
+	z-index: 2000;
         }
 
 /* Fix IE. Hide from IE Mac \*/
@@ -69,17 +71,17 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
 .dropdown li a:hover {
     //background: url(../images/menu-hover.png) right center no-repeat;
     color: #E2144A;
-    background: #f9f9f9;
+    background: #45B972;
 } /* Hover Styles */
 
 .dropdown li ul li a { padding: 2px 5px; }  /*Sub Menu Styles */
 
-.dropdown li:hover ul  { display: block; } /* The magic */
+.dropdown li:hover ul  { display: block; z-index: 2000;} /* The magic */
 
 
-.dropdown li.over ul  { display: block; } /* The magic */
+.dropdown li.over ul  { display: block; z-ndex: 2000;} /* The magic */
 
-.dropdown li.current { width: 250px; }
+.dropdown li.current { width: 159px; }
 .dropdown li.current a {
   //width: 250px;
   //background: url(../images/menu-current.png) right center no-repeat;
@@ -90,7 +92,7 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
 .dropdown a.root {
   color: #222222;
   font-size: 1.2em;
-  text-indent: -5px;
+  text-indent: -15px;
   line-height: 2.2em;
 }
 
@@ -112,6 +114,7 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
   padding: 10px;
   border: 1px solid #dddddd;
   position: relative;
+  z-index: 1000;
 }
 .click-for-more
 {
@@ -132,6 +135,7 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
   min-height: 60px;
   background: #ffffff;
   border-top: 1px solid #ffffff;
+  z-index: 1000;
 }
 .new-category-listing li a.info span { display: block; }
 .category-listing li:hover { border-color: #1b1b1b; }
