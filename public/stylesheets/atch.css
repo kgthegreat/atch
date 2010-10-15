@@ -27,7 +27,7 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
         padding: 0;
         list-style: none;
         width: 160px; /* Width of Menu Items */
-        border: 1px solid #45b972;
+        //border: 1px solid #45b972;
         }
 
 .dropdown li {
@@ -74,7 +74,9 @@ body.two-col #wrapper { background-image: none; //url(../images/wrapper-back-2.p
     background: #45B972;
 } /* Hover Styles */
 
-.dropdown li ul li a { padding: 2px 5px; }  /*Sub Menu Styles */
+.dropdown li ul li a {
+    padding: 2px 5px;
+}  /*Sub Menu Styles */
 
 .dropdown li:hover ul  { display: block; z-index: 2000;} /* The magic */
 
