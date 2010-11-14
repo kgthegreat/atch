@@ -1,0 +1,144 @@
+
+<script type="text/javascript">
+
+  function update_listed_price(mrp,acp,id,element) {
+
+
+  $('.product-listing span#'+id+'acp').text('Our Price: Rs.' + acp)
+  $('.product-listing span#'+id+'mrp').html('<del>MRP: Rs.'+mrp+'</del>');
+
+  ColourFade('.product-listing span#'+id+'mrp','#c9de55');
+  ColourFade('.product-listing span#'+id+'acp','#c9de55');
+  //ColourFade('.product-listing li#product_'+id +' div.product-title', 'Yellow');
+
+
+}
+
+ function ColourFade(selector,color){
+   $(selector)
+      .css('opacity', 1)
+      .animate({ backgroundColor: color, opacity: 1.0 }, 400)
+      .animate({ backgroundColor: '#ffffff', opacity: 1.0}, 400 );
+  }
+</script>
+
+<%
+  paginated_products = Spree::Config.searcher.products if params.key?(:keywords)
+  paginated_products ||= products
+%>
+
+<% if paginated_products.respond_to?(:total_pages)
+      params.delete(:search)
+      params.delete(:taxon
+)
+%><%= will_paginate(paginated_products,
+                    :previous_label => "&#171; #{t('previous')}",
+                    :next_label => "#{t('next')} &#187;") %>
+<% end -%>
+
+
+
+<% if products.empty? %>
+  <%= t(:no_products_found) %>
+<% end %>
+
+<% if products.any? %>
+
+<ul class="product-listing">
+  <% products.each do |product| %>
+    <% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
+      <li id="product_<%= product.id %>">
+        <div class="product-title">
+          <%=  product.name  -%>
+        </div>
+
+                  <br></br>
+
+        <%= link_to small_image(product), product %>
+
+        <div class="product-details">
+          <div class = "product-main-price">
+            <%= "<span id=#{product.id}"+"mrp"+" class='price selling'><del> MRP:  #{product_price(product)}</del></span>" + "<span id=#{product.id}"+"acp"+">Our Price:  #{product_price(product)} </span>" %>
+</div>
+
+          <div class = "variant-details">
+            <p class="whatso">
+            <% form_for :order, :url => orders_url do |f| %>
+              <% hook :inside_product_cart_form do %>
+
+
+                <% if product.has_variants? %>
+
+
+
+                  <%  has_checked = false
+                      product.variants.active.each_with_index do |v,index|
+                      next if v.option_values.empty? || (!v.in_stock && !Spree::Config[:show_zero_stock_products])
+                        checked = !has_checked && (v.in_stock || Spree::Config[:allow_backorders])
+                        has_checked = true if checked %>
+
+
+
+                  <label>
+                    <%= radio_button_tag "products[#{product.id}]", v.id, checked  , options= { :onclick => "update_listed_price(#{v.price},#{v.price}, #{product.id},this)" ,:disabled => !v.in_stock && !Spree::Config[:allow_backorders]} %>
+
+                    <%= variant_options v %>
+
+                    <% if variant_price_diff v %>
+
+                    <% end %>
+                  </label>
+                  <br></br>
+
+                  <% end%>
+
+
+                  <% end%>
+
+                  <div class="quantity-checkout">
+
+                    <% if product.has_stock? || Spree::Config[:allow_backorders] %>
+                      <%= text_field_tag (product.has_variants? ? :quantity : "variants[#{product.master.id}]"),
+                          1, :class => "title", :size => 2 %>
+
+
+                      <button type='submit' class="small primary" >
+                        <%= image_tag('/images/add-to-cart.png') %>
+                      </button>
+                  </div>
+                <% else %>
+                  <%= content_tag('strong', t('out_of_stock')) %>
+                <% end %>
+
+              <% end %>
+            <% end %>
+
+
+
+
+            </p>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+
+<% content_for :head do %>
+  <%= javascript_include_tag 'product' %>
+
+<% end %>
+
+<% end %>
+
+<hr class="space" />
+<% if paginated_products.respond_to?(:total_pages)
+      params.delete(:search)
+      params.delete(:taxon)
+
+%><%= will_paginate(paginated_products,
+                    :previous_label => "&#171; #{t('previous')}",
+                    :next_label => "#{t('next')} &#187;") %>
+<% end -%>
+<hr class="space" />
