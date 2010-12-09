@@ -6,7 +6,10 @@ class SiteHooks < Spree::ThemeSupport::HookListener
 
   replace :homepage_sidebar_navigation, 'shared/sidebar_atch'
 
-#  insert_after :homepage_sidebar_navigation, :text => "Cart can come here"
+  #replace :inside_cart_form, 'shared/some_cart'
+
+  insert_after :homepage_sidebar_navigation,  'shared/omnicart_atch'
+  insert_after :taxon_sidebar_navigation,  'shared/omnicart_atch'
 #  insert_before :homepage_products, :text => "<p><h4>We are gearing up to serve you better. Thanks to all the customers who took part in the dry runs.<br> We are not accepting orders right now. Stay tuned for more and Happy Diwali :)</h4></p>"
 
  # remove :sidebar

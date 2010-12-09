@@ -13,6 +13,10 @@ module Spree::BaseHelper
   end
 
 
+  def get_order
+    order = Order.find_or_create_by_id(session[:order_id]) unless session[:order_id].blank?
+  end
+
   def link_to_cart(text=t('cart'))
     path = cart_path
     order = Order.find_or_create_by_id(session[:order_id]) unless session[:order_id].blank?

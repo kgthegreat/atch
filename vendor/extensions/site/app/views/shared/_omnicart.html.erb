@@ -1,0 +1,43 @@
+
+
+<div id="omnicart" class="omnicart" style="display:scroll;position: fixed;bottom: 15px; ">
+
+
+ <h6 style="display:scroll;position: relative;top: 3px"><%= link_to_cart -%></h6>
+<div style="overflow: auto; height: 280px; width: 180px;">
+  <ul id="omnicart-list" class="dropdown" >
+    <%  if !orders.nil? -%>
+
+
+      <% if !orders.line_items.empty? -%>
+
+        <% orders.line_items.reverse.each do |order| %>
+          <li><%= order.product.name%></li>
+
+
+        <% end %>
+
+
+      <% else -%>
+        <li> Your cart is empty. Start shopping! </li>
+      <% end %>
+
+
+    <% else -%>
+     <li> Your cart is empty. Start shopping! </li>
+    <% end %>
+
+  </ul>
+
+
+</div>
+<div style="width: 160px; display: scroll;position: relative;top: 5px">
+ <%  if !orders.nil? && !orders.line_items.empty?-%>
+ <%= link_to t("checkout"), edit_order_checkout_url(orders), :class => 'button small primary', :style => "float: right;" %>
+
+        <%= link_to 'empty', order_path(orders), :method => :delete, :class => 'button small primary',  :style => "float: left"  %>
+ <% end %>
+</div>
+
+
+</div>

@@ -4,7 +4,7 @@
   function update_listed_price(mrp,acp,id,element) {
 
 
-  $('.product-listing span#'+id+'acp').text('Our Price: Rs.' + acp)
+  $('.product-listing span#'+id+'acp').text('Our Price: Rs.' + acp);
   $('.product-listing span#'+id+'mrp').html('<del>MRP: Rs.'+mrp+'</del>');
 
   ColourFade('.product-listing span#'+id+'mrp','#c9de55');
@@ -12,13 +12,20 @@
   //ColourFade('.product-listing li#product_'+id +' div.product-title', 'Yellow');
 
 
-}
+  }
 
- function ColourFade(selector,color){
-   $(selector)
-      .css('opacity', 1)
-      .animate({ backgroundColor: color, opacity: 1.0 }, 400)
-      .animate({ backgroundColor: '#ffffff', opacity: 1.0}, 400 );
+  function update_cart(name) {
+  //alert(name);
+  //setTimeout("ColourFade('#omnicart-list', '#c9de55')", 2600);
+  //$.('#omnicart-list').html($.('#omnicart-list').html+'<li>'+ name + '</li>');
+  ColourFade('#omnicart-list', '#c9de55')
+  }
+
+  function ColourFade(selector,color){
+  $(selector)
+  .css('opacity', 1)
+  .animate({ backgroundColor: color, opacity: 1.0 }, 400)
+  .animate({ backgroundColor: '#ffffff', opacity: 1.0}, 400 );
   }
 </script>
 
@@ -62,8 +69,8 @@
 </div>
 
           <div class = "variant-details">
-            <p class="whatso">
-            <% form_for :order, :url => orders_url do |f| %>
+
+            <% form_remote_tag  :url => orders_url do |f| %>
               <% hook :inside_product_cart_form do %>
 
 
@@ -88,7 +95,8 @@
 
                     <% end %>
                   </label>
-                  <br></br>
+                  <br>
+
 
                   <% end%>
 
@@ -102,7 +110,7 @@
                           1, :class => "title", :size => 2 %>
 
 
-                      <button type='submit' class="small primary" >
+                      <button type='submit' class="small primary" onclick="update_cart()">
                         <%= image_tag('/images/add-to-cart.png') %>
                       </button>
                   </div>
@@ -113,10 +121,6 @@
               <% end %>
             <% end %>
 
-
-
-
-            </p>
           </div>
         </div>
       </li>

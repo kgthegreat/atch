@@ -24,7 +24,7 @@ class SiteExtension < Spree::Extension
       preference :admin_interface_logo, :string, :default => '/images/attachawal_really_really_small.png'
       preference :default_country_id, :integer, :default => 92
       preference :address_require_state, :boolean, :default => false
-      preference :products_per_page, :integer, :default => 12
+      preference :products_per_page, :integer, :default => 21
       preference :address_requires_state, :boolean, :default => false
       preference :checkout_zone, :string, :default => "India"
     #  preference :logo, :string, :default => '/images/attachawal_really_really_small.png'

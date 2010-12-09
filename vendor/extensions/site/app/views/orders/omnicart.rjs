@@ -1,0 +1,3 @@
+
+page.replace_html("omnicart-link" , :partial => "shared/omnicart_link_atch")
+page.replace_html("somestuff" , :partial => "shared/omnicart_atch" )
