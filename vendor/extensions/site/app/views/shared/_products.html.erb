@@ -5,9 +5,9 @@
 
 
   $('.product-listing span#'+id+'acp').text('Our Price: Rs.' + acp);
-  //$('.product-listing span#'+id+'mrp').html('<del>MRP: Rs.'+mrp+'</del>');
+  $('.product-listing span#'+id+'mrp').html('<del>MRP: Rs.'+mrp+'</del>');
 
-  //ColourFade('.product-listing span#'+id+'mrp','#c9de55', 400, 400);
+  ColourFade('.product-listing span#'+id+'mrp','#c9de55', 400, 400);
   ColourFade('.product-listing span#'+id+'acp','#c9de55', 400, 400);
   //ColourFade('.product-listing li#product_'+id +' div.product-title', 'Yellow');
 
@@ -65,7 +65,7 @@
 
         <div class="product-details">
           <div class = "product-main-price">
-            <%= "<span id=#{product.id}"+"acp"+">Our Price:  #{product_price(product)} </span>" %>
+            <%= "<span id=#{product.id}"+"mrp"+"><del>MRP:  #{product_mrp(product.variants.active[0])}</del> </span>"+"<span id=#{product.id}"+"acp"+">Our Price:  #{product_price(product)} </span>" %>
 </div>
 
           <div class = "variant-details">
@@ -87,7 +87,7 @@
 
 
                   <label>
-                    <%= radio_button_tag "products[#{product.id}]", v.id, checked  , options= { :onclick => "update_listed_price(#{v.price},#{v.price}, #{product.id},this)" ,:disabled => !v.in_stock && !Spree::Config[:allow_backorders]} %>
+                    <%= radio_button_tag "products[#{product.id}]", v.id, checked  , options= { :onclick => "update_listed_price(#{v.mrp},#{v.price}, #{product.id},this)" ,:disabled => !v.in_stock && !Spree::Config[:allow_backorders]} %>
 
                     <%= variant_options v %>
 
