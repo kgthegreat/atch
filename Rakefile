@@ -158,7 +158,7 @@ namespace :spree do
 
         next if id.downcase == "id"  #skip header row
 
-        puts "Updating product: #{name} at no. #{n}"
+        puts "Updating product: #{name} at no. #{u}"
         product = Product.find(id)
         puts "Product found: #{product.name}"
 
