@@ -131,7 +131,7 @@ namespace :spree do
           puts "updating a variant"
           variant = product_with_variant.variants.find(id)
           variant.sku = sku
-          variant.option_values = OptionValue.find_or_create_by_name_and_presentation_and_option_type_id(measure, measure, weight_type.id)
+          variant.option_values << OptionValue.find_or_create_by_name_and_presentation_and_option_type_id(measure, measure, weight_type.id)
           variant.price = price.to_d
           variant.mrp = mrp.to_d
           puts "variant on hand #{on_hand.to_i}"
