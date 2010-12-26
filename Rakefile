@@ -24,7 +24,7 @@ namespace :spree do
     end
     FasterCSV.open("#{RAILS_ROOT}/tmp/products.csv", "w") do |csv|
 
-      csv << ["id", "sku", "name", "description","measure" ,"price" , "on_hand", "taxons", "has_variants", "no_of_variants", "deleted_at"] #mention all the columns which you need.
+      csv << ["id", "sku", "name", "description","measure" ,"price" , "mrp", "on_hand", "taxons", "has_variants", "no_of_variants", "deleted_at"] #mention all the columns which you need.
       count_i = 0
       products.each do |p|
         next if !p.deleted_at.nil?
@@ -39,6 +39,7 @@ namespace :spree do
                 p.description,
                 nil,                       #this column is for option-types. Master variant does not have any.
                 p.master_price.to_s,
+                nil,                       #mrp column. Product does not have any.
                 p.on_hand,
                 really_pretty_taxon,
                 p.has_variants?,
@@ -61,6 +62,7 @@ namespace :spree do
                     nil,
                     measure,
                     variant.price.to_s,
+                    variant.mrp.to_s,
                     variant.on_hand]
           end
         end
@@ -88,12 +90,13 @@ namespace :spree do
       description       = row[3].to_s.strip
       measure           = row[4].to_s.strip
       price             = row[5].to_s.strip
-      on_hand           = row[6].to_s.strip
-      taxon_string      = row[7].to_s.strip
-      has_variants      = row[8].to_s.strip
-      no_of_variants    = row[9].to_s.strip
-      deleted_at        = row[10]
-      image_path        = row[11]
+      mrp               = row[6].to_s.strip
+      on_hand           = row[7].to_s.strip
+      taxon_string      = row[8].to_s.strip
+      has_variants      = row[9].to_s.strip
+      no_of_variants    = row[10].to_s.strip
+      deleted_at        = row[11]
+      image_path        = row[12]
 
       weight_type = OptionType.find_or_create_by_name_and_presentation("weight","Weight");
       if !total_variants.nil? && total_variants > 0 && !product_with_variant.nil?
@@ -105,7 +108,7 @@ namespace :spree do
           if sku.nil? || sku.eql?("")
             sku=product_with_variant.sku
           end
-          variant = product_with_variant.variants.create(:sku => sku, :price => price.to_d)
+          variant = product_with_variant.variants.create(:sku => sku, :price => price.to_d, :mrp => mrp.to_d)
 
 =begin
           weight_option_value = OptionValue.find_by_presentation(measure);
@@ -129,6 +132,7 @@ namespace :spree do
           variant = product_with_variant.variants.find(id)
           variant.sku = sku
           variant.price = price.to_d
+          variant.mrp = mrp.to_d
           puts "variant on hand #{on_hand.to_i}"
           variant.on_hand = on_hand.to_i
           variant.save!
