@@ -4,6 +4,7 @@
 <% hook :inside_head do %>
   <%= render :partial => 'shared/head'%>
 <% end %>
+<%= render 'shared/ga' -%>
 </head>
 <%if @body_class.nil?
     if @content_for_sidebar
@@ -46,12 +47,14 @@ end
 
   <div id="wrapper" class="container">
     <% if @content_for_sidebar %>
-    <div id="sidebar">
+     <div id="sidebar">
       <% hook :sidebar do %>
         <%= yield :sidebar %>
       <% end %>
     </div>
-    <% end %>
+   <% end %>
+
+
 
     <div id="content">
       <%= breadcrumbs(@taxon) if @taxon %>
