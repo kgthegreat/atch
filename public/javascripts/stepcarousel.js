@@ -1,7 +1,7 @@
 //** Step Carousel Viewer- (c) Dynamic Drive DHTML code library: http://www.dynamicdrive.com
 //** Script Download/ http://www.dynamicdrive.com/dynamicindex4/stepcarousel.htm
 //** Usage Terms: http://www.dynamicdrive.com/notice.htm
-//** Current version (Sept 29th, 09'): 1.8 See http://www.dynamicdrive.com/dynamicindex4/stepcarouselchangelog.txt for details
+//** Current version 1.9 (July 28th, 10'): See http://www.dynamicdrive.com/dynamicindex4/stepcarouselchangelog.txt for details
 
 
 jQuery.noConflict()
@@ -172,7 +172,7 @@ var stepcarousel={
 			}
 		}
 		var endpoint=config.paneloffsets[pindex]+(pindex==0? 0 : config.beltoffset) //left distance for Belt DIV to travel to
-		if (pindex==0 && direction=='forward' || config.currentpanel==0 && direction=='back' && config.panelbehavior.wraparound==true){ //decide whether to apply "push pull" effect
+		if (config.panelbehavior.wraparound==true && config.panelbehavior.wrapbehavior=="pushpull" && (pindex==0 && direction=='forward' || config.currentpanel==0 && direction=='back')){ //decide whether to apply "push pull" effect
 			config.$belt.animate({left: -config.paneloffsets[config.currentpanel]-(direction=='forward'? 100 : -30)+'px'}, 'normal', function(){
 				config.$belt.animate({left: -endpoint+'px'}, config.panelbehavior.speed, function(){config.onslideaction(this)})
 			})
@@ -275,6 +275,7 @@ var stepcarousel={
 		config.offsets={left:stepcarousel.getoffset(config.$gallery.get(0), "offsetLeft"), top:stepcarousel.getoffset(config.$gallery.get(0), "offsetTop")}
 		config.$belt=config.$gallery.find('.'+config.beltclass) //Find Belt DIV that contains all the panels
 		config.$panels=config.$gallery.find('.'+config.panelclass) //Find Panel DIVs that each contain a slide
+		config.panelbehavior.wrapbehavior=config.panelbehavior.wrapbehavior || "pushpull" //default wrap behavior to "pushpull"
 		config.$paginatediv=$('#'+config.galleryid+'-paginate') //get pagination DIV (if defined)
 		if (config.autostep)
 			config.autostep.pause+=config.panelbehavior.speed

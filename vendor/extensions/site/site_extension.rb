@@ -31,7 +31,7 @@ class SiteExtension < Spree::Extension
      #  preference :allow_openid, false
     end
 
-    Spree::Config.set(:logo =>  '/images/logo-test4.png')   # '/images/attachawal.png') # '/images/attachawal_really_really_small.png')
+    Spree::Config.set(:logo =>  '/images/logo_cart_v21.jpg')   # '/images/attachawal.png') # '/images/attachawal_really_really_small.png')
     #Spree::Config.set(:address_require_state => false)
 
     # make your helper avaliable in all views

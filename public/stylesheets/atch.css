@@ -354,6 +354,7 @@ div#footer { display: none; }
   margin: 0 auto;
   overflow: hidden;
   display: block;
+ /* background-color: #fffa6b;*/
 }
 
 .container-header-not-logged-in {
@@ -361,6 +362,7 @@ div#footer { display: none; }
   margin: 0 auto;
   overflow: hidden;
   display: block;
+ /* background-color: #fffa6b;*/
 }
 
 
@@ -368,22 +370,22 @@ div#footer { display: none; }
 
 .stepcarousel{
     position: relative; /*leave this value alone*/
-    border: 0px solid black;
+    border: 1px solid #dddddd;
     overflow: scroll; /*leave this value alone*/
-    width: 955px; /*Width of Carousel Viewer itself*/
-    height: 250px; /*Height should enough to fit largest content's height*/
+    width: 925px; /*Width of Carousel Viewer itself*/
+    height: 230px; /*Height should enough to fit largest content's height*/
 }
 
 .stepcarousel .belt{
     position: absolute; /*leave this value alone*/
-    left: 0;
+    left: 0px;
     top: 0;
 }
 
 .stepcarousel .panel{
     float: left; /*leave this value alone*/
     overflow: hidden; /*clip content that go outside dimensions of holding panel DIV*/
-    margin: 10px; /*margin around each panel*/
-    width: 955px;
-    height: 250px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
+    margin: 0px; /*margin around each panel*/
+    width: 925px;
+    height: 230px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
 }

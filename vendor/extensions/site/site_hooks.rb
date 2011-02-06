@@ -8,11 +8,13 @@ class SiteHooks < Spree::ThemeSupport::HookListener
 
   #replace :inside_cart_form, 'shared/some_cart'
 
+  #insert_before :homepage_sidebar_navigation,  'shared/faq'
   insert_after :homepage_sidebar_navigation,  'shared/omnicart_atch'
   insert_after :taxon_sidebar_navigation,  'shared/omnicart_atch'
 #  insert_before :homepage_products, :text => "<p><h4>We are gearing up to serve you better. Thanks to all the customers who took part in the dry runs.<br> We are not accepting orders right now. Stay tuned for more and Happy Diwali :)</h4></p>"
 
   insert_before :homepage_products, 'shared/faq'
+  insert_before :homepage_products, 'shared/pitch'
  # remove :sidebar
  # remove :homepage_products
   #
@@ -41,7 +43,7 @@ class SiteHooks < Spree::ThemeSupport::HookListener
   #
 
   # insert_before :homepage_products, :text => "<h1>Welcome to the store!<br> We are currently gearing up to serve you.<br> Good things coming your way very soon. :) </h1>"
-  #   insert_after :homepage_products, 'shared/offers' # renders a partial
+  #insert_after :homepage_products, 'shared/offers' # renders a partial
   #   replace :taxon_sidebar_navigation, 'shared/my_sidebar
   #
   # adding a link below product details:
