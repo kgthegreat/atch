@@ -1,0 +1,12 @@
+<script>
+</script>
+
+
+<% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Taxon.roots  %>
+<% form_tag products_url, :method => :get, :id => "search_box" do %>
+<div class="wrapper">
+  <%= text_field_tag :keywords, params[:keywords],  :id => "search" ,:placeholder => "Search for products..." %>
+
+<button type="submit" class="search_btn"><img src="/images/search_icon.png" title="Search" /></button>
+</div>
+<% end %>

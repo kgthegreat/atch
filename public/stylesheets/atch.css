@@ -138,12 +138,12 @@ body.two-col #content {
         list-style: none;
         width: 160px; /* Width of Menu Items */
         border: 1px solid #dddddd;
+//      background-color: #fffa6b;
         }
 
 .dropdown li {
         position: relative;
         margin: 0;
-        //background: #000000;
         }
 
 .dropdown li ul {
@@ -153,6 +153,7 @@ body.two-col #content {
         display: none;
         border: 1px solid #dddddd;
         z-index: 2000;
+        background-color: #45b972;
         }
 
 /* Styles for Menu Items */
@@ -350,7 +351,7 @@ p.css-vertical-text {
 div#footer { display: none; }
 
 .container-header-user-logged-in {
-  width: 1190px;
+  width: 1080px;
   margin: 0 auto;
   overflow: hidden;
   display: block;
@@ -389,3 +390,210 @@ div#footer { display: none; }
     width: 925px;
     height: 230px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
 }
+
+/* top nav bar */
+
+#topnav {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    background: #45b972;
+    line-height: 2;
+    font-weight: bold;
+    font-size: 100%;
+    height: 25px;
+    margin-right: 20px;
+    margin-left: 20px;
+    /*padding-right: 60px;*/
+}
+
+body {
+    margin-top: 0px;
+
+}
+#topnav a {
+    padding: 0.2em 1em;
+    color: #fffa6b;
+    float: right;
+    border-right: 1px solid #fff;
+}
+
+#topnav a:hover {
+    color: #468804;
+    background: #fffa6b;
+    }
+
+#topnav li {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+/* search */
+
+#search_box {
+        background:-moz-linear-gradient(top, #45b972, #468804);
+        background:-webkit-gradient(linear, 0 0, 0 100%, from(#45b972), to(#468804));
+        border:1px solid #468804;
+        border-radius:5px;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        -moz-box-shadow:inset 0 1px #45b972, inset 0 -2px 5px #468804, 0 0 0 4px rgba(255,255,255,0.65);
+        -webkit-box-shadow:inset 0 1px #45b972, inset 0 -2px 5px #4, 0 0 0 4px rgba(255,255,255,0.65);
+        padding:4px;
+        width:310px;
+        text-align: left;
+}
+
+#search_box .wrapper {
+        background:#fff;
+        border:1px solid #45b972;
+        -moz-border-radius:2px;
+        -webkit-border-radius:2px;
+        -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,.3), 0 1px #468804;
+        -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.3), 0 1px #468804;
+        height:50px;
+        padding-left:10px;
+        position:relative;
+}
+
+#search_box input,
+#search_box input:focus { border:none; color:#dddddd; outline:none; font:20px Helvetica, Arial, sans-serif; margin:12px 0; width:250px; }
+#search_box button {
+    background:-moz-linear-gradient(top, #45b972, #45b972);
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#45b972), to(#45b972));
+    border:1px solid #45b972;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    -moz-box-shadow:inset 0 -2px 3px #45b972, inset 0 1px #45b972, 0 1px 1px rgba(0,0,0,4);
+    -webkit-box-shadow:inset 0 -2px 3px #45b972, inset 0 1px #468804, 0 1px 1px rgba(0,0,0,.4);
+    cursor:pointer;
+    height:45px;
+    position:absolute;
+    right:2px;
+    top:2px;
+    width:45px;
+}
+
+/*header nav*/
+ul#nav-bar {
+  line-height: 50px;
+  float: right;
+  clear: both;
+  font-size: 1.2em;
+  list-style: none;
+
+  padding-right: 20px;
+}
+
+
+ul#nav-bar li {
+  float: left;
+  margin-left: 1em;
+  padding-right: 15px;
+
+
+}
+
+ul#nav-bar li#omnicart-link {
+
+    background-color: #fffa6b;
+    color: #45b972;
+    padding-left: 2px;
+    padding-right: 2px;
+    height: 60px;
+}
+
+ul#nav-bar li#omnicart-link a:hover {
+
+
+    color: #000000;
+
+
+}
+
+/*ul#nav-bar li#ul*/
+
+li#contact {
+
+    list-style-type: none;
+    display: list-item;
+    }
+
+ul#contact-ul {
+
+    list-style-type: none;
+    display: block;
+    width:150px
+
+    }
+
+#cartlink {
+    background: #fffa6b;
+    color: #45b972;
+    width: 160px;
+    }
+
+#cartlink a:hover {
+
+    color: #000000;
+
+    }
+
+/* light boxes for delivery,faq,offers */
+
+#light {
+    float: left;
+    text-align: left;
+    height: 70%;
+    }
+
+
+#delivery {
+    float: center;
+    text-align: center;
+    height: 80%;
+    }
+
+#offers {
+    float: center;
+    text-align: left;
+    height: 30%;
+    }
+
+#faqclose {
+    font: bold 20px;
+    color: black;
+    background: #468804;
+    }
+
+.black_overlay{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 200%;
+    background-color: #468804;
+    z-index:1001;
+    -moz-opacity: 0.4;
+    opacity:.40;
+    filter: alpha(opacity=40);
+}
+.white_content {
+    display: none;
+    position: absolute;
+    top: 6%;
+    left: 25%;
+    width: 50%;
+    height: 25%;
+    padding: 16px;
+    border: 16px solid #468804;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+}
+#delinfo
+{
+    text-align:left;
+    }

@@ -626,7 +626,7 @@ button, a.button, input.button {
   -moz-border-radius: 0.3em;
   -webkit-border-radius: 0.3em;
   border-radius: 0.3em;
-  background: #efefef url(../images/buttons/bg-button.png) center left repeat-x !important;
+  background: #efefef url(../images/buttons/bg-button.png) center left repeat-x;
   border-style: solid;
   border-width: 1px !important;
   border-color: #dddddd #999999 #999999 #dddddd !important;
@@ -654,9 +654,9 @@ button.primary, a.button.primary, input.button.primary {
   font-weight: bold;
   color: #000000;
 }
-button:hover { background-image: url(../images/buttons/bg-button-hover.png) !important; }
+button:hover { background-image: url(../images/buttons/bg-button-hover.png); }
 a.button:hover { background-image: url(../images/buttons/bg-button-hover.png) !important; }
-input.button:hover { background-image: url(../images/buttons/bg-button-hover.png) !important; }
+input.button:hover { background-image: url(../images/buttons/bg-button-hover.png); }
 button.large, a.button.large, input.button.large {
   -moz-border-radius: 0.3em;
   -webkit-border-radius: 0.3em;

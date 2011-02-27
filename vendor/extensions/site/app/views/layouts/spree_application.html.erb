@@ -16,18 +16,25 @@ end
  %>
 <body class="<%= @body_class %>"<%= %( id="#{@body_id}") if @body_id %>>
 
-
+<ul id="topnav">
 <% if current_user -%>
+  <li><%= link_to t('logout'), logout_path %></li>
+  <li><%= link_to t('my_account'), user_path(current_user) %></li>
 
-  <div id="header" class="container-header-user-logged-in">
-
-<% else -%>
-
-  <div id="header" class="container-header-not-logged-in">
-
+<% else %>
+  <li><%= link_to t('log_in'), login_path %></li>
 <% end -%>
+<li><%= render 'shared/faq' -%></li>
+<li><%= render 'shared/delivery' -%></li>
+<li><%= render 'shared/offers' -%></li>
 
 
+</ul>
+
+
+
+
+<div id="header" class="container">
 
   <div id="login-bar">
       <ul id="nav-bar">
@@ -35,13 +42,6 @@ end
       </ul>
     </div>
     <%= logo %>
-  </div>
-
-  <div id="header" class="container">
-    <% if @content_for_sidebar -%>
-      <% # render 'shared/pitch' %>
-    <% end -%>
-
   </div>
 
 
@@ -70,7 +70,7 @@ end
   </div>
 
 <%= render 'shared/feedback' -%>
-<%= render 'shared/offers' -%>
+
 
 
 </body>

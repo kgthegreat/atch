@@ -1,10 +1,10 @@
 
 
-<div id="omnicart" class="omnicart" style="display:scroll;position: fixed; top: 280px;">
+<div id="omnicart" class="omnicart" style="display:scroll;position: fixed; top: 320px;">
 
 
- <h6 style="display:scroll;position: relative;top: 3px"><%= link_to_cart -%></h6>
-<div style="overflow: auto; height: 270px; width: 180px;">
+ <h6 id="cartlink" style="display:scroll;position: relative;top: 3px"><%= link_to_cart -%></h6>
+<div style="overflow: auto; height: 240px; width: 180px;">
   <ul id="omnicart-list" class="dropdown" >
     <%  if !orders.nil? -%>
 
@@ -31,7 +31,7 @@
 
 
 </div>
-<div style="width: 160px; display: scroll;position: relative;top: 5px">
+<div style="width: 160px; display: scroll;position: relative,bottom: 30px">
  <%  if !orders.nil? && !orders.line_items.empty?-%>
  <%= link_to t("checkout"), edit_order_checkout_url(orders), :class => 'button small primary', :style => "float: right;" %>
 
