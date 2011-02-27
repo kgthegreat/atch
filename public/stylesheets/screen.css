@@ -654,9 +654,9 @@ button.primary, a.button.primary, input.button.primary {
   font-weight: bold;
   color: #000000;
 }
-button:hover { background-image: url(../images/buttons/bg-button-hover.png); }
+button:hover { background-image: url(../images/buttons/bg-button-hover.png) !important; }
 a.button:hover { background-image: url(../images/buttons/bg-button-hover.png) !important; }
-input.button:hover { background-image: url(../images/buttons/bg-button-hover.png); }
+input.button:hover { background-image: url(../images/buttons/bg-button-hover.png) !important; }
 button.large, a.button.large, input.button.large {
   -moz-border-radius: 0.3em;
   -webkit-border-radius: 0.3em;
