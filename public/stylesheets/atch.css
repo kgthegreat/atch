@@ -8,6 +8,7 @@ body { background: #fff; }
     //z-index: 5000;
     text-align: left;
     //padding:0px;
+
 }
 
 .product-listing li a {
@@ -181,8 +182,8 @@ body.two-col #content {
 
 .dropdown li a:hover {
     //background: url(../images/menu-hover.png) right center no-repeat;
-    color: #E2144A;
-    background: #45B972;
+    color: #45b972;
+    background: #fffa6b;
 } /* Hover Styles */
 
 .dropdown li ul li a {
@@ -267,8 +268,9 @@ body.two-col #content {
 
 
 .pagination{
-padding: 2px;
-text-align: center;
+//padding: 2px;
+text-align: right;
+padding-right: 25px;
 }
 
 .pagination ul{
@@ -416,6 +418,7 @@ body {
     color: #fffa6b;
     float: right;
     border-right: 1px solid #fff;
+    text-decoration: none;
 }
 
 #topnav a:hover {
@@ -597,3 +600,61 @@ ul#contact-ul {
 {
     text-align:left;
     }
+
+/*Important information on the homepage*/
+
+
+#homepage-info {
+    margin: 0;
+    padding-bottom: 5px;
+    text-align: right;
+    background: #ffffff;
+    line-height: 2;
+    font-weight: bold;
+    font-size: 24px;
+    //height: 50px;
+    margin-right: 25px;
+//    margin-left: 160px;
+    /*padding-right: 60px;*/
+}
+
+/*Home page info styling*/
+
+#homepage-info a {
+    padding: 0.2em 1em;
+    color: #fffa6b;
+    float: right;
+    border-right: 1px solid #fff;
+}
+
+#homepage-info a:hover {
+    color: #468804;
+    background: #fffa6b;
+    }
+
+#homepage-info li {
+    display: inline;
+    margin: 0;
+    padding: 7px;
+    background: #45b972;
+    color: #fffa6b;
+   // width: 10px;
+   // border: 1px solid #45b972;
+}
+
+
+/*breadcrumb styling*/
+
+.breadcrumbs ul li a {
+  text-decoration: none;
+  padding: 4px;
+  color: #fffa6b;
+  background: #45b972;
+}
+
+.breadcrumbs ul li a:hover {
+  text-decoration: none;
+  padding: 4px;
+  color: #45b972;
+  background: #fffa6b;
+}
