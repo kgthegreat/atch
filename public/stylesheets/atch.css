@@ -443,7 +443,7 @@ body {
         -webkit-border-radius:5px;
         -moz-box-shadow:inset 0 1px #45b972, inset 0 -2px 5px #468804, 0 0 0 4px rgba(255,255,255,0.65);
         -webkit-box-shadow:inset 0 1px #45b972, inset 0 -2px 5px #4, 0 0 0 4px rgba(255,255,255,0.65);
-        padding:4px;
+        padding:1px;
         width:310px;
         text-align: left;
 }
@@ -455,7 +455,7 @@ body {
         -webkit-border-radius:2px;
         -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,.3), 0 1px #468804;
         -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.3), 0 1px #468804;
-        height:50px;
+        height:45px;
         padding-left:10px;
         position:relative;
 }
@@ -471,7 +471,7 @@ body {
     -moz-box-shadow:inset 0 -2px 3px #45b972, inset 0 1px #45b972, 0 1px 1px rgba(0,0,0,4);
     -webkit-box-shadow:inset 0 -2px 3px #45b972, inset 0 1px #45b972, 0 1px 1px rgba(0,0,0,.4);
     cursor:pointer;
-    height:45px;
+    height:40px;
     position:absolute;
     right:2px;
     top:2px;
@@ -492,8 +492,8 @@ ul#nav-bar {
   clear: both;
   font-size: 1.2em;
   list-style: none;
-
   padding-right: 20px;
+  padding-top: 10px;
 }
 
 
