@@ -463,19 +463,26 @@ body {
 #search_box input,
 #search_box input:focus { border:none; color:#dddddd; outline:none; font:20px Helvetica, Arial, sans-serif; margin:12px 0; width:250px; }
 #search_box button {
-    background:-moz-linear-gradient(top, #45b972, #45b972);
-    background:-webkit-gradient(linear, 0 0, 0 100%, from(#45b972), to(#45b972));
+    background:-moz-linear-gradient(top, #45b972, #45b972) !important;
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#45b972), to(#45b972)) !important;
     border:1px solid #45b972;
     -moz-border-radius:2px;
     -webkit-border-radius:2px;
     -moz-box-shadow:inset 0 -2px 3px #45b972, inset 0 1px #45b972, 0 1px 1px rgba(0,0,0,4);
-    -webkit-box-shadow:inset 0 -2px 3px #45b972, inset 0 1px #468804, 0 1px 1px rgba(0,0,0,.4);
+    -webkit-box-shadow:inset 0 -2px 3px #45b972, inset 0 1px #45b972, 0 1px 1px rgba(0,0,0,.4);
     cursor:pointer;
     height:45px;
     position:absolute;
     right:2px;
     top:2px;
     width:45px;
+}
+
+#search_box button:hover {
+    background:-moz-linear-gradient(top, #468804, #468804) !important;
+    background:-webkit-gradient(linear, 0 0, 0 100%, from(#468804), to(#468804)) !important;
+    -moz-box-shadow:inset 0 -2px 3px #468804, inset 0 1px #468804, 0 1px 1px rgba(0,0,0,4);
+    -webkit-box-shadow:inset 0 -2px 3px #468804, inset 0 1px #468804, 0 1px 1px rgba(0,0,0,.4)
 }
 
 /*header nav*/
