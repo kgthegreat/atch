@@ -668,7 +668,8 @@ ul#contact-ul {
     padding: 7px;
     background: #45b972;
     color: #fffa6b;
-    //-webkit-border-radius:15px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
    // width: 10px;
    // border: 2px solid red;
 }
