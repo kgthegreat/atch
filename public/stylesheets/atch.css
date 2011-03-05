@@ -8,14 +8,30 @@ body { background: #fff; }
     //z-index: 5000;
     text-align: left;
     //padding:0px;
+   // line-height: 1.3em;
+    border: 1px solid #45b972;
+   // margin: 1em 0 0;
 
 }
+
+.product-listing {
+    margin: 0 0 0;
+}
+
+.on-offer {
+
+    border: 1px solid #45b972 !important;
+
+}
+
 
 .product-listing li a {
   display: block;
   text-decoration: none;
   color: #111111;
 }
+
+
 
 
 .product-details {
@@ -28,28 +44,31 @@ body { background: #fff; }
     width: 175px;
     min-height: 60px;
     border-top: 1px solid #ffffff;
-    //text-align: right;
+    //text-align: left;
     //margin-left: 20px;
 }
 
 .variant-details.ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 .variant-details {
     text-align: left;
     margin-left: 20px;
-    }
-.product-main-price {
+}
 
+.product-main-price {
     text-align: left;
     margin-left: 45px;
+}
 
-    }
 .product-title {
     text-align: left;
     font-size: 1.1em;
+    font-weight: bold;
+  //  color: #468804;
 }
 
 .quantity-checkout
@@ -138,7 +157,7 @@ body.two-col #content {
         padding: 0;
         list-style: none;
         width: 160px; /* Width of Menu Items */
-        border: 1px solid #dddddd;
+        border: 2px solid #45b972;
 //      background-color: #fffa6b;
         }
 
@@ -152,9 +171,11 @@ body.two-col #content {
         left: 159px; /* Set 1px less than menu width */
         top: 0;
         display: none;
-        border: 1px solid #dddddd;
+        //border: 1px solid #dddddd;
+        border: 1px solid #45b972;
         z-index: 2000;
         background-color: #45b972;
+
         }
 
 /* Styles for Menu Items */
@@ -173,6 +194,7 @@ body.two-col #content {
         white-space: nowrap;
         overflow: hidden;
         z-index: 2000;
+        //font-weight: bold;
         }
 
 /* Fix IE. Hide from IE Mac \*/
@@ -271,6 +293,7 @@ body.two-col #content {
 //padding: 2px;
 text-align: right;
 padding-right: 25px;
+padding-top: 20px;
 }
 
 .pagination ul{
@@ -288,7 +311,7 @@ padding-bottom: 1px;
 
 .pagination a, .pagination a:visited{
 padding: 0 5px;
-border: 1px solid #9aafe5;
+border: 1px solid #45b972;
 text-decoration: none;
 color: #45b972;
 }
@@ -618,9 +641,9 @@ ul#contact-ul {
     background: #ffffff;
     line-height: 2;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     //height: 50px;
-    margin-right: 25px;
+    margin-right: 35px;
 //    margin-left: 160px;
     /*padding-right: 60px;*/
 }
@@ -645,10 +668,18 @@ ul#contact-ul {
     padding: 7px;
     background: #45b972;
     color: #fffa6b;
+    //-webkit-border-radius:15px;
    // width: 10px;
-   // border: 1px solid #45b972;
+   // border: 2px solid red;
 }
 
+#so {
+
+     background: #fffa6b;
+    color: #45b972;
+   // width: 10px;
+    border: 1px solid #468804;
+}
 
 /*breadcrumb styling*/
 
