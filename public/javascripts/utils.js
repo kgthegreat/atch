@@ -1,8 +1,8 @@
 function update_listed_price(mrp,acp,id,element) {
 
  // alert("aaya");
-    jQuery('.product-listing span#'+id+'acp').text('Rs.' + acp);
-    jQuery('.product-listing span#'+id+'mrp').html('<del>Rs.'+mrp+'</del>');
+    jQuery('.product-listing span#'+id+'acp').text('  Rs.' + acp);
+    jQuery('.product-listing span#'+id+'mrp').html('<del>Rs.'+mrp+'</del>'+'&nbsp');
 
     colourFade('.product-listing span#'+id+'mrp','#c9de55', 400, 400);
     colourFade('.product-listing span#'+id+'acp','#c9de55', 400, 400);

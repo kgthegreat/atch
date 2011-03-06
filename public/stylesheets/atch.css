@@ -29,8 +29,13 @@ body { background: #fff; }
 .our-price {
     color: #bb0000;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
+
+.mrp {
+    font-size: 1.2em;
+}
+
 
 .product-listing li a {
   display: block;
@@ -69,7 +74,7 @@ body { background: #fff; }
 
 .product-main-price {
     text-align: left;
-    margin-left: 45px;
+    margin-left: 25px;
 }
 
 .product-title {
@@ -82,13 +87,14 @@ body { background: #fff; }
 .quantity-checkout
 {
     position: absolute;
-    top: 137px;
+    top: 135px;
     left: 81px;
     text-align: right;
+   // margin-bottom: 10px;
 }
 
 
-.product-details span {display: block;}
+// .product-details span {display: block;}
 
 
 .product-listing li a.info {

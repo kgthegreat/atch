@@ -34,7 +34,7 @@
 
         <div class="product-details">
           <div class = "product-main-price">
-            <%= "<span id=#{product.id}"+"mrp"+"><del> #{product_mrp(product.variants.active[0])}</del> </span>"+"<span id=#{product.id}"+"acp"+" class='our-price'" + " >#{product_price(product)} </span>" %>
+            <%= "<span id=#{product.id}"+"mrp"+" class='mrp'" + "><del> #{product_mrp(product.variants.active[0])}</del> </span>"+"&nbsp"+"<span id=#{product.id}"+"acp"+" class='our-price'" + " > #{product_price(product)} </span>" %>
 </div>
 
           <div class = "variant-details">
