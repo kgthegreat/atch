@@ -20,10 +20,17 @@ body { background: #fff; }
 
 .on-offer {
 
-    border: 1px solid #45b972 !important;
+    border: 1px solid #468804 !important;
+   // padding-bottom: 8px !important;
+  //  background: #7ddfab !important;
 
 }
 
+.our-price {
+    color: #bb0000;
+    font-weight: bold;
+    font-size: 1.1em;
+}
 
 .product-listing li a {
   display: block;
@@ -35,7 +42,7 @@ body { background: #fff; }
 
 
 .product-details {
-    background: #FFF;
+    background: #fff;
     //width: 290px;
     position: absolute;
     top: 25px;
@@ -44,6 +51,7 @@ body { background: #fff; }
     width: 175px;
     min-height: 60px;
     border-top: 1px solid #ffffff;
+    margin-top: 2px;
     //text-align: left;
     //margin-left: 20px;
 }
@@ -636,15 +644,19 @@ ul#contact-ul {
 
 #homepage-info {
     margin: 0;
-    padding-bottom: 5px;
+    padding: 5px 2px 5px 2px;
     text-align: right;
-    background: #ffffff;
+  //  background: #E2EEF2;
     line-height: 2;
     font-weight: bold;
     font-size: 20px;
     //height: 50px;
     margin-right: 35px;
+    margin-left: 20px;
+  //  border: 2px solid #BCD7E2;
+  //  width: 930px;
 //    margin-left: 160px;
+
     /*padding-right: 60px;*/
 }
 
@@ -666,21 +678,15 @@ ul#contact-ul {
     display: inline;
     margin: 0;
     padding: 7px;
-    background: #45b972;
-    color: #fffa6b;
-   // -webkit-border-radius:15px;
+    background: #BCD7E2; // #416B8B;
+    color: #ffffff;
+
+   // -webkit-border-radius:10px;
    // -moz-border-radius:10px;
    // width: 10px;
-   // border: 2px solid red;
+   // border: 2px solid #E2EEF2;
 }
 
-#so {
-
-     background: #fffa6b;
-    color: #45b972;
-   // width: 10px;
-    border: 1px solid #468804;
-}
 
 /*breadcrumb styling*/
 

@@ -1,8 +1,8 @@
 function update_listed_price(mrp,acp,id,element) {
 
  // alert("aaya");
-    jQuery('.product-listing span#'+id+'acp').text('Our Price: Rs.' + acp);
-    jQuery('.product-listing span#'+id+'mrp').html('<del>MRP: Rs.'+mrp+'</del>');
+    jQuery('.product-listing span#'+id+'acp').text('Rs.' + acp);
+    jQuery('.product-listing span#'+id+'mrp').html('<del>Rs.'+mrp+'</del>');
 
     colourFade('.product-listing span#'+id+'mrp','#c9de55', 400, 400);
     colourFade('.product-listing span#'+id+'acp','#c9de55', 400, 400);
@@ -27,30 +27,30 @@ function colourFade(selector,color, time1, time2){
 }
 
 $(function() {
-	
-	var $placeholder = $('input[placeholder]');
-	
-	if ($placeholder.length > 0) {
-	
-		var attrPh = $placeholder.attr('placeholder');
-		
-		$placeholder.attr('value', attrPh)
-		  .bind('focus', function() {
-			
-			var $this = $(this);
-			
-			if($this.val() === attrPh)
-				$this.val('').css('color','#171207');
-			
-		}).bind('blur', function() {
-		
-			var $this = $(this);
-		
-			if($this.val() === '')
-				$this.val(attrPh).css('color','#dddddd');
-		
-		});
-	
-	}
-	
+
+        var $placeholder = $('input[placeholder]');
+
+        if ($placeholder.length > 0) {
+
+                var attrPh = $placeholder.attr('placeholder');
+
+                $placeholder.attr('value', attrPh)
+                  .bind('focus', function() {
+
+                        var $this = $(this);
+
+                        if($this.val() === attrPh)
+                                $this.val('').css('color','#171207');
+
+                }).bind('blur', function() {
+
+                        var $this = $(this);
+
+                        if($this.val() === '')
+                                $this.val(attrPh).css('color','#dddddd');
+
+                });
+
+        }
+
 });

@@ -23,9 +23,9 @@
 <ul class="product-listing">
   <% products.each do |product| %>
     <% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
-      <li id="product_<%= product.id %>">
+      <li id="product_<%= product.id %>" <%= 'class="on-offer"' if product.meta_keywords %>>
         <div class="product-title">
-          <%=  product.name  -%>
+          <%= link_to product.name,product  -%>
         </div>
 
                   <br>
@@ -34,7 +34,7 @@
 
         <div class="product-details">
           <div class = "product-main-price">
-            <%= "<span id=#{product.id}"+"mrp"+"><del>MRP:  #{product_mrp(product.variants.active[0])}</del> </span>"+"<span id=#{product.id}"+"acp"+">Our Price:  #{product_price(product)} </span>" %>
+            <%= "<span id=#{product.id}"+"mrp"+"><del> #{product_mrp(product.variants.active[0])}</del> </span>"+"<span id=#{product.id}"+"acp"+" class='our-price'" + " >#{product_price(product)} </span>" %>
 </div>
 
           <div class = "variant-details">
@@ -105,7 +105,7 @@
 
 <% end %>
 
-<hr class="space" />
+
 <% if paginated_products.respond_to?(:total_pages)
       params.delete(:search)
       params.delete(:taxon)
