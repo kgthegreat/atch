@@ -18,13 +18,27 @@ body { background: #fff; }
     margin: 0 0 0;
 }
 
-.on-offer {
+.product-on-offer {
 
     border: 1px solid #468804 !important;
    // padding-bottom: 8px !important;
   //  background: #7ddfab !important;
 
 }
+
+.on-offer-tag {
+   // display: inline;
+   position: absolute;
+   right: 2px;
+   top: 2px;
+   //border: 1px solid #990000;
+   padding: 1px;
+   color: #ffffff;
+   background: #990000;
+  // text-align: right;
+  // z-index: 1006;
+    }
+
 
 .our-price {
     color: #bb0000;
@@ -42,7 +56,6 @@ body { background: #fff; }
   text-decoration: none;
   color: #111111;
 }
-
 
 
 
@@ -78,7 +91,7 @@ body { background: #fff; }
 }
 
 .product-title {
-    text-align: left;
+  //  text-align: left;
     font-size: 1.1em;
     font-weight: bold;
   //  color: #468804;
@@ -684,8 +697,8 @@ ul#contact-ul {
     display: inline;
     margin: 0;
     padding: 7px;
-    background: #BCD7E2; // #416B8B;
-    color: #ffffff;
+    background: #e7f8d7; // #416B8B;
+    color: #59a151;
 
    // -webkit-border-radius:10px;
    // -moz-border-radius:10px;
