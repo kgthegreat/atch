@@ -23,16 +23,18 @@
 <ul class="product-listing">
   <% products.each do |product| %>
     <% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
-      <li id="product_<%= product.id %>" <%= 'class="on-offer"' if product.meta_keywords %>>
+      <li id="product_<%= product.id %>" <%= 'class="product-on-offer"' if product.meta_keywords %>>
+
         <div class="product-title">
           <%= link_to product.name,product  -%>
         </div>
-
+        <%= '<span class="on-offer-tag">SASTA !!</span><div class="triangle"></div>' if product.meta_keywords %>
                   <br>
 
         <%= link_to small_image(product), product %>
 
         <div class="product-details">
+
           <div class = "product-main-price">
             <%= "<span id=#{product.id}"+"mrp"+" class='mrp'" + "><del> #{product_mrp(product.variants.active[0])}</del> </span>"+"&nbsp"+"<span id=#{product.id}"+"acp"+" class='our-price'" + " > #{product_price(product)} </span>" %>
 </div>

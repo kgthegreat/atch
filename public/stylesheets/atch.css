@@ -27,18 +27,42 @@ body { background: #fff; }
 }
 
 .on-offer-tag {
-   // display: inline;
    position: absolute;
-   right: 2px;
-   top: 2px;
-   //border: 1px solid #990000;
+   right: -8px;
+   top: -10px;
+   border: 1px solid #990000;
    padding: 1px;
-   color: #ffffff;
-   background: #990000;
-  // text-align: right;
-  // z-index: 1006;
-    }
+   background: #990000; // #e7f8d7; // #416B8B;
+   color: #fff;
+   font: 1em;
+   font-weight: bold;
+}
 
+.triangle {
+    border-color: transparent transparent transparent #e18380;
+    border-style:solid;
+    border-width:10px;
+    height:0px;
+    width:0px;
+    position: absolute;
+    right: -18px;
+    top: 3px;
+    z-index: -1;
+
+}
+
+.triangle-top {
+    border-color: transparent transparent #e18380 transparent;
+    border-style:solid;
+    border-width:10px;
+    height:0px;
+    width:0px;
+    position: absolute;
+    right: 52px;
+    top: -20px;
+    z-index: -1;
+
+}
 
 .our-price {
     color: #bb0000;
