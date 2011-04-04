@@ -1,9 +1,4 @@
 "id","sku","name","description","measure","price","mrp","on_hand","taxons","has_variants","no_of_variants","deleted_at"
-1060501387,,"Brooke Bond Red Label Natural Care ",,,34.3,35,1000,"Groceries/Beverages/Tea & Coffee","TRUE",4,
-1025788095,,,,"90 gms",34.3,35,1000,,,,
-1025788094,,,,"200 gms",76.4,78,1000,,,,
-1025790424,,,,"400 gms",135.2,138,1000,,,,
-,,,,"860 gms",308.7,315,1000,,,,
 1060501388,,"Nescafe Classic Jar",,,70.6,72,1000,"Groceries/Beverages/Tea & Coffee","TRUE",3,
 1025788097,,,,"50 gms",70.6,72,1000,,,,
 ,,,,"25 gms",38.2,39,1000,,,,
