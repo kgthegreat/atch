@@ -26,14 +26,131 @@ body { background: #fff; }
 
 }
 
+.weekly-offer {
+
+    border: 1px solid #990000 !important;
+  //  position: fixed;
+   // top: 100px;
+   // right: 50px;
+   // padding-bottom: 8px !important;
+  //  background: #7ddfab !important;
+
+}
+
+.weekly-offer-showcase {
+
+    border: 0px solid #45b972 !important;
+   // width: 330px;
+    ///text-align: right;
+   // margin-right: 600px;
+    position: relative;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    //position: absolute;
+   // top: 100px;
+   // right: 50px;
+   // padding-bottom: 8px !important;
+  //  background: #7ddfab !important;
+
+}
+
+.weekly-offer-showcase li {
+    margin: 0 0 0;
+    border: 20px solid #468804 !important;
+    -moz-box-shadow:rgba(0,0,0,0.5) 0px 0px 24px;
+    -webkit-box-shadow:rgba(0,0,0,0.5) 0px 0px 24px;
+   // box-shadow:rgba(0,0,0,0.5) 0px 0px 24px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    
+  //  border-bottom: 60px solid #45b972 !important;
+    }
+
+.weekly-offer-tag {
+   position: absolute;
+   left: 355px;
+   top: 0px;
+   border: 1px solid #e80000;
+   padding: 1px;
+   background: #e80000; // #e7f8d7; // #416B8B;
+   color: #fff;#e7f8d7;
+   font-size: 2.8em;
+   font-weight: bold;
+   width: 180px;
+   padding-right: 10px;
+   padding-left: 10px;
+}
+
+.weekly-offer-tag-triangle {
+    border-color: transparent #e80000 transparent  transparent;
+    border-style:solid;
+    border-width:20px;
+    height:0px;
+    width:0px;
+    position: absolute;
+    left: 315px;
+    top: 40px;
+    z-index: 1007;
+
+}
+
+.monthly-food-tag {
+   position: absolute;
+   left: 355px;
+   bottom: 30px;
+   border: 1px solid #e80000;
+   padding: 1px;
+   background: #e80000; // #e7f8d7; // #416B8B;
+   color: #fff;#e7f8d7;
+   font-size: 2.4em;
+   font-weight: bold;
+   width: 180px;
+   padding-right: 10px;
+   padding-left: 10px;
+}
+
+.monthly-food-tag-triangle {
+    border-color: transparent transparent transparent #e80000;
+    border-style:solid;
+    border-width:20px;
+    height:0px;
+    width:0px;
+    position: absolute;
+    left: 555px;
+    bottom: 70px;
+    z-index: 1007;
+
+}
+
+.monthly-food {
+   position: absolute;
+   right: 50px;
+   bottom: 30px;
+   border: 20px solid #e80000;
+   padding: 1px;
+  // background: #e80000; // #e7f8d7; // #416B8B;
+   color: #fff;#e7f8d7;
+   font-size: 2.4em;
+   font-weight: bold;
+   width: 250px;
+   height: 205px;
+   //padding-right: 10px;
+   //padding-left: 10px;
+   -moz-border-radius: 20px;
+   -moz-box-shadow: rgba(0,0,0,0.5) 0px 0px 24px;
+}
+
+
 .on-offer-tag {
    position: absolute;
    right: -8px;
-   top: -10px;
-   border: 1px solid #990000;
+   top: -2px;
+   border: 1px solid #e80000;
    padding: 1px;
-   background: #990000; // #e7f8d7; // #416B8B;
-   color: #fff;
+   background: #e80000; // #e7f8d7; // #416B8B;
+   color: #fff;#e7f8d7;
    font: 1em;
    font-weight: bold;
 }
@@ -46,23 +163,11 @@ body { background: #fff; }
     width:0px;
     position: absolute;
     right: -18px;
-    top: 3px;
+    top: 11px;
     z-index: -1;
 
 }
 
-.triangle-top {
-    border-color: transparent transparent #e18380 transparent;
-    border-style:solid;
-    border-width:10px;
-    height:0px;
-    width:0px;
-    position: absolute;
-    right: 52px;
-    top: -20px;
-    z-index: -1;
-
-}
 
 .our-price {
     color: #bb0000;
@@ -342,7 +447,7 @@ body.two-col #content {
 
 .pagination{
 //padding: 2px;
-text-align: right;
+text-align:right;
 padding-right: 25px;
 padding-top: 20px;
 }
@@ -423,8 +528,8 @@ p.css-vertical-text {
 
 /*OFFERS TAB END*/
 
-/*To hide the footer*/
-div#footer { display: none; }
+/*To hide the footer
+div#footer { display: none; }*/
 
 .container-header-user-logged-in {
   width: 1080px;
