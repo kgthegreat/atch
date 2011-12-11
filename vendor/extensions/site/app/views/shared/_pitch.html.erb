@@ -1,51 +1,49 @@
 <body>
 
 
-<div id="mygallery" class="stepcarousel">
-<div class="belt">
+  <div id="mygallery" class="stepcarousel">
+    <div class="belt">
+
+      <div class="panel">
+        <%= render :partial => "shared/headline" %>
+      </div>
 
 
-<!--div class="panel">
-<img src="images/header_pitch/pitch3.png" />
-</div>
+      <div class="panel">
+        <div class="paneloffer">
+        <%= render :partial => "shared/products", :locals => {:products =>
+(Product.active.find(:all,
+ :conditions => 'products.meta_keywords LIKE "%offers firstslide%"', :limit => 3))} %>
+        </div>
+      </div>
 
-<div class="panel">
-<p>Hello World</p>
-</div-->
+      <div class="panel">
+        <div class="paneloffer">
+        <%= render :partial => "shared/products", :locals => {:products =>
+(Product.active.find(:all,
+ :conditions => 'products.meta_keywords LIKE "%offers secondslide%"', :limit => 3))} %>
+        </div>
+      </div>
 
-<div class="panel">
-<img src="images/header_pitch/pitch4.png" />
-
-</div>
-
-<!--div class="panel">
-<img src="images/header_pitch/first_pitch1.png" />
-</div>
-
-<div class="panel">
-<img src="images/header_pitch/second_pitch2.png" />
-</div>
-
-<div class="panel">
-<img src="images/header_pitch/second_pitch3.png" />
-</div>
-
-<div class="panel">
-<img src="images/header_pitch/second_pitch4.png" />
-</div-->
-
-
-
-
-</div>
+      <div class="panel">
+        <div class="paneloffer">
+        <%= render :partial => "shared/products", :locals => {:products =>
+(Product.active.find(:all,
+ :conditions => 'products.meta_keywords LIKE "%offers thirdslide%"', :limit => 3))} %>
+        </div>
+      </div>
 
 
 
-</div>
+    </div>
 
-<div id="mygallery-paginate" style="width: 925px; text-align:right; align: right;">
-<img src="images/header_pitch/selectcircle.png" data-over="images/header_pitch/graycircle.png" data-select="images/header_pitch/closedcircle.png" data-moveby="1" />
-</div>
+
+
+  </div>
+
+  <div id="mygallery-paginate" style="width: 925px; text-align:right; align: right;">
+    <img src="images/header_pitch/selectcircle.png" data-over="images/header_pitch/graycircle.png" data-select="images/header_pitch/closedcircle.png" data-moveby="1" />
+  </div>
 
 
 </body>
