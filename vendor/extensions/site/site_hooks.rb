@@ -16,12 +16,12 @@ class SiteHooks < Spree::ThemeSupport::HookListener
 #  insert_before :homepage_products, :text => "<p><h4>We are gearing up to serve you better. Thanks to all the customers who took part in the dry runs.<br> We are not accepting orders right now. Stay tuned for more and Happy Diwali :)</h4></p>"
 
 #  insert_before :homepage_products, 'shared/faq'
-#  insert_before :homepage_products, 'shared/homepage'
+  insert_before :homepage_products, 'shared/homepage'
 #  insert_before :homepage_products, 'shared/top_offers'
 #  insert_before :homepage_products do
  #   '<img src="/images/header.png"/>'
  #   end
-  insert_before :homepage_products, 'shared/info'
+#  insert_before :homepage_products, 'shared/info'
 
  # remove :sidebar
  # remove :homepage_products
