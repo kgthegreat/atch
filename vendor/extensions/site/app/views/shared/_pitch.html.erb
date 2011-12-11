@@ -13,7 +13,7 @@
         <div class="paneloffer">
         <%= render :partial => "shared/products", :locals => {:products =>
 (Product.active.find(:all,
- :conditions => '"#{products.meta_keywords}" LIKE "%offers firstslide%"', :limit => 3))} %>
+ :conditions => '"products.meta_keywords" LIKE "%offers firstslide%"', :limit => 3))} %>
         </div>
       </div>
 
@@ -21,7 +21,7 @@
         <div class="paneloffer">
         <%= render :partial => "shared/products", :locals => {:products =>
 (Product.active.find(:all,
- :conditions => '"#{products.meta_keywords}" LIKE "%offers secondslide%"', :limit => 3))} %>
+ :conditions => '"products.meta_keywords" LIKE "%offers secondslide%"', :limit => 3))} %>
         </div>
       </div>
 
@@ -29,7 +29,7 @@
         <div class="paneloffer">
         <%= render :partial => "shared/products", :locals => {:products =>
 (Product.active.find(:all,
- :conditions => '"#{products.meta_keywords}" LIKE "%offers thirdslide%"', :limit => 3))} %>
+ :conditions => '"products.meta_keywords" LIKE "%offers thirdslide%"', :limit => 3))} %>
         </div>
       </div>
 
